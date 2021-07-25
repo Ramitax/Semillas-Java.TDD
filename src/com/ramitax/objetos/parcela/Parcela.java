@@ -79,7 +79,7 @@ public abstract class Parcela {
      */
     public int getCantidadMaximaDePlantasToleradas(){
         if ( ancho > largo) {
-            return (int)(getSuperficie() / 5);
+            return (int) (getSuperficie() / 5);
         } else {
             return (int) ((getSuperficie() / 3) + largo );
         }
@@ -94,7 +94,7 @@ public abstract class Parcela {
         boolean complicaciones = false;
         for (Planta planta : this.plantas) {
             if (planta.horasDeToleranciaAlSol() < horasRecibidasDeSol) {
-                complicaciones = planta.horasDeToleranciaAlSol() < horasRecibidasDeSol;
+                complicaciones = true;
                 break;
             }
         }
@@ -249,6 +249,6 @@ public abstract class Parcela {
                 cantidadDePlantasBienAsociadas++;
             }
         }
-        return cantidadDePlantasBienAsociadas / plantas.size();
+        return (float) cantidadDePlantasBienAsociadas / plantas.size();
     }
 }

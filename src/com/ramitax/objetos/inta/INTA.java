@@ -16,13 +16,6 @@ public class INTA {
     private List<Parcela> parcelas;
 
     /**
-     * Metodo Constructor sin plantas, encargado de crear el objeto
-     */
-    public INTA() {
-        this.parcelas = new ArrayList<>();
-    }
-
-    /**
      * Metodo Constructor, encargado de crear el objeto
      *
      * @param parcelas  -> colleccion de parcelas
@@ -46,7 +39,7 @@ public class INTA {
         for (Parcela parcela : parcelas) {
             cantidadDePlantasTotales += parcela.getPlantas().size();
         }
-        return cantidadDePlantasTotales / parcelas.size();
+        return (float) cantidadDePlantasTotales / parcelas.size();
     }
 
     public Parcela parcelaMasSustentable () {

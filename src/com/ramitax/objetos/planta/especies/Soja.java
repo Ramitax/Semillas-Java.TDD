@@ -34,7 +34,7 @@ public class Soja extends Planta {
 
     @Override
     public boolean proporcionaSemillas() {
-        return ( esFuerte() || ( (getAnioDeObtencion() > 2007) &&  (getAltura() > 1)) );
+        return ( esFuerte() || ( (getAnioDeObtencion() > 2007) && (getAltura() > 1) ) );
     }
 
     @Override
